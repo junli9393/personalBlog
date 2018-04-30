@@ -1,0 +1,51 @@
+
+
+.contact-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+
+.left{
+  width: 66.5%;
+  height: 100%;
+  float: left;
+  background-color: #1c4545;
+  overflow: auto;
+}
+
+.right {
+  width: 33.5%;
+  height: 100%;
+  float: right;
+  background-color: #ae8730;
+  text-align: center;
+  padding: 4vh 2vh 2vh 2vh;
+}
+
+.form {
+  height: 100%;
+}
+
+#email-content {
+  height: 40%;
+}
+
+.name{
+  margin: 4vh 2vh 2vh 2vh;
+  color: black;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.icon {
+  padding: 20vh;
+}
+
+.graph {
+  margin: 0vh 2vh 2vh 2vh;
+  height: 20%;
+  width: 20%;
+}

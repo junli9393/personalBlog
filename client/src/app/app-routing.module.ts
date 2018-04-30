@@ -1,15 +1,28 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { ChatComponent } from './chat/chat.component';
+import { RouterModule, Routes } from '@angular/router';
+
+import { ContactComponent } from './contact.component';
+import {AppComponent} from './app.component';
+import {WorldmapComponent} from './worldmap.component';
+import {BlogComponent} from './blog.component';
+import {HomeComponent} from './home.component';
+import {BlogdetailComponent} from './blogdetail.component';
+import {ChatComponent} from './chat.component';
 
 const routes: Routes = [
-  {
-    path: '', component: ChatComponent
-  }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'worldmap', component: WorldmapComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'blog-detail', component: BlogdetailComponent },
+  { path: 'demo', component: ChatComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
 })
-export class AppRoutingModule { }
+
+export class AppRoutingModule {}
+

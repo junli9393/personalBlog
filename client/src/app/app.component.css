@@ -1,5 +1,142 @@
- .app-content {
+html,body {
+  height:100%;
+}
+
+.my-body {
+  height:100vh;
+  background-color: white;
+  width: 100%;
+}
+
+.page-header {
+  top:0;
+  height:8%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.left-nav {
+  float: left;
+  position: relative;
+  background-color: white;
+  width: 50%;
+  height: 100%;
+}
+
+#left {
+  float: left;
+  position: relative;
+  background-color: white;
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
-} 
+}
+
+#left li#title {
+  background-color: white;
+  height: 100%;
+  padding: 0 0 0 5% ;
+  font-size: x-large;
+}
+
+.right-nav {
+  float: right;
+  position: relative;
+
+  background-color: #ededed;
+  width: 50%;
+  height: 100%;
+}
+
+#right {
+  float: right;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#right li {
+  width: 33.3%;
+  height: 100%;
+  background-color: #d7ebd8;
+}
+
+#right li#nav-worldmap {
+  background-color: #f9f9f9;
+}
+
+#right li#nav-blog {
+  background-color: #f4f4f4;
+}
+
+#right li#nav-contact {
+  background-color: #ededed;
+}
+
+#left li#title:hover, #left li#title:focus{
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: #dddddd;
+  float: left;
+}
+#right li#nav-contact:hover, #right li#nav-contact:focus,
+#right li#nav-blog:hover, #right li#nav-blog:focus,
+#right li#nav-worldmap:hover, #right li#nav-worldmap:focus{
+  width: 33.333%;
+  height: 100%;
+  color: white;
+  background-color: #dddddd;
+  float: left;
+}
+
+
+#right li a {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+}
+
+#right li a {
+
+}
+
+.left-nav a {
+  color: #333;
+  text-decoration: none;
+  text-align: left;
+}
+
+.nav li{
+  height: 100%;
+  background-color: transparent;
+}
+
+.nav li a {
+  color: grey;
+  /*color: #333;*/
+  float: left;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+}
+
+
+.content {
+  width: 100%;
+  height: 92%;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.word{
+  font-size: 10vh;
+}

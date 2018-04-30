@@ -20,9 +20,17 @@ export class SocketService {
         this.socket.emit('message', message);
     }
 
+    public sendQuit(message: Message): void {
+      this.socket.emit('quit', message);
+    }
+
+    public sendName(message: Message): void {
+      this.socket.emit('name', message);
+    }
+
     public onMessage(): Observable<Message> {
         return new Observable<Message>(observer => {
-            this.socket.on('message', (data: Message) => observer.next(data));
+          this.socket.on('message', (data: Message) => observer.next(data));
         });
     }
 
