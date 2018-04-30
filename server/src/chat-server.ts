@@ -6,7 +6,7 @@ import * as aws from 'aws-sdk-typescript';
 import { Message } from './model';
 
 export class ChatServer {
-    public static readonly PORT:number = 8080;
+    public static readonly PORT:number = 8090;
     private app: express.Application;
     private server: Server;
     private io: SocketIO.Server;

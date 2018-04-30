@@ -141,7 +141,7 @@ var ChatServer = /** @class */ (function () {
     ChatServer.prototype.getApp = function () {
         return this.app;
     };
-    ChatServer.PORT = 8080;
+    ChatServer.PORT = 8090;
     return ChatServer;
 }());
 exports.ChatServer = ChatServer;
