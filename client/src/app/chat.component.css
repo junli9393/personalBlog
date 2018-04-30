@@ -57,17 +57,18 @@
     position:fixed;
     bottom:25px;
     left:25px;
-    right:10%;
+    right:15%;
 }
 
 .chat-exit-container {
   background-color: white;
   position:fixed;
+  bottom: 0px;
   height: 15%;
-  width: 15%;
-  bottom:0px;
-  right:25px;
+  left: 85%;
+  right: 25px;
   text-align: center;
+  padding:4px;
 }
 
 .chat-notification {
@@ -75,5 +76,13 @@
 }
 
 .close-button {
-  background-color: white;
+  background-color: #b3bcbf;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
