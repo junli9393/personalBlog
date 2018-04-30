@@ -1,6 +1,3 @@
-<!--<button mat-fab (click)="onClickUserInfo()">-->
-  <!--<mat-icon>person</mat-icon>-->
-<!--</button>-->
 <div class="chat-container">
   <mat-card class="main-card">
     <mat-list class="chat-list">
@@ -20,6 +17,13 @@
         </p>
       </mat-list-item>
     </mat-list>
+
+    <div class="chat-left-container">
+      Room Members:
+      <mat-list-item *ngFor="let person of personNames">
+        <mat-label class="chat-name-list"><b>{{person}}</b></mat-label>
+      </mat-list-item>
+    </div>
     <div class="chat-footer-container">
       <mat-icon>message</mat-icon>
       <mat-form-field class="chat-input">
@@ -32,5 +36,14 @@
         <mat-hint align="end">{{inputMessage.value.length}}/140</mat-hint>
       </mat-form-field>
     </div>
+
+
+    <div class="chat-exit-container">
+      <button type="button" class="close-button" (click)="onClickUserInfo()">
+        QUIT ROOM
+      </button>
+    </div>
   </mat-card>
+
 </div>
+

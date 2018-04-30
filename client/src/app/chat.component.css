@@ -8,13 +8,13 @@
 
 .chat-container {
     position: fixed;
-    width: 100%; 
-    height: 100%;  
+    width: 100%;
+    height: 100%;
 }
 
 .chat-input {
     padding-top: 20px;
-    width: 80%; 
+    width: 80%;
 }
 
 .chat-list {
@@ -22,8 +22,23 @@
     position: fixed;
     top: 90px;
     left: 25px;
-    right: 25px;
+    right: 15%;
     bottom: 120px;
+}
+
+.chat-name-list{
+  padding-left: 10px;
+}
+
+.chat-left-container {
+  background-color: #b3bcbf;
+  overflow: auto;
+  position: fixed;
+  top: 90px;
+  left: 85%;
+  right: 25px;
+  bottom: 100px;
+  padding: 10px;
 }
 
 .chat-list-item {
@@ -34,16 +49,31 @@
 }
 
 .main-card {
-    height: 100%;  
+    height: 100%;
 }
+
 
 .chat-footer-container {
     position:fixed;
     bottom:25px;
     left:25px;
-    right:25px;
+    right:10%;
+}
+
+.chat-exit-container {
+  background-color: white;
+  position:fixed;
+  height: 15%;
+  width: 15%;
+  bottom:0px;
+  right:25px;
+  text-align: center;
 }
 
 .chat-notification {
     text-align: center;
+}
+
+.close-button {
+  background-color: white;
 }

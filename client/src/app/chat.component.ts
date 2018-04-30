@@ -19,6 +19,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
   action = Action;
   user: User;
   messages: Message[] = [];
+  personNames: String[] = [];
   messageContent: string;
   ioConnection: any;
   dialogRef: MatDialogRef<DialogUserComponent> | null;
@@ -77,10 +78,13 @@ export class ChatComponent implements OnInit, AfterViewInit {
     this.ioConnection = this.socketService.onMessage()
       .subscribe((message: Message) => {
       console.log('message.action' + message.action);
-      if(message.action != Action.UPDATE)
+      if(message.action == Action.JOINED || message.action == Action.LEFT || message.action == Action.RENAME || message.action === undefined)
         this.messages.push(message);
-      else
-        console.log('reach line 82');
+      else {
+        console.log('message: ' + JSON.stringify(message));
+        this.personNames = Array.from(message.from.name);
+        console.log(this.personNames.length);
+      }
       });
 
 
@@ -99,16 +103,6 @@ export class ChatComponent implements OnInit, AfterViewInit {
     return Math.floor(Math.random() * (1000000)) + 1;
   }
 
-  // public onClickUserInfo() {
-  //   this.openUserPopup({
-  //     data: {
-  //       username: this.user.name,
-  //       title: 'Edit Details',
-  //       dialogType: DialogUserType.EDIT
-  //     }
-  //   });
-  // }
-
   private openUserPopup(params): void {
     this.dialogRef = this.dialog.open(DialogUserComponent, params);
     this.dialogRef.afterClosed().subscribe(paramsDialog => {
@@ -123,6 +117,15 @@ export class ChatComponent implements OnInit, AfterViewInit {
       } else if (paramsDialog.dialogType === DialogUserType.EDIT) {
         this.sendNotification(paramsDialog, Action.RENAME);
       }
+    });
+  }
+
+  public onClickUserInfo() {
+    console.log('user name' + this.user.name);
+    this.socketService.send({
+      from: this.user,
+      content: null,
+      action: Action.LEFT
     });
   }
 
