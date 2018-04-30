@@ -1,6 +1,7 @@
 import { createServer, Server } from 'http';
 import * as express from 'express';
 import * as socketIo from 'socket.io';
+import * as aws from 'aws-sdk-typescript';
 
 import { Message } from './model';
 
@@ -46,7 +47,10 @@ export class ChatServer {
                 console.log('[server](message): %s', JSON.stringify(m));
                 this.io.emit('message', m);
             });
-
+            socket.on('name', (m: Message) => {
+                console.log('[server](name): %s', JSON.stringify(m));
+                this.io.emit('message', m);
+            });
             socket.on('disconnect', () => {
                 console.log('Client disconnected');
             });
