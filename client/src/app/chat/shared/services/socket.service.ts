@@ -6,7 +6,7 @@ import { Event } from '../model/event';
 
 import * as socketIo from 'socket.io-client';
 
-const SERVER_URL = 'http://localhost:8080';
+const SERVER_URL = 'http://localhost:8090';
 
 @Injectable()
 export class SocketService {
@@ -30,7 +30,10 @@ export class SocketService {
 
     public onMessage(): Observable<Message> {
         return new Observable<Message>(observer => {
-          this.socket.on('message', (data: Message) => observer.next(data));
+          this.socket.on('message', (data: Message) => {
+            console.log(JSON.stringify(data));
+            observer.next(data)
+          });
         });
     }
 
