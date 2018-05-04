@@ -22,6 +22,7 @@ import { MatButtonModule, MatCheckboxModule, MatInputModule, MatButtonToggleModu
 import {SharedModule} from './shared/shared.module';
 import {SocketService} from './chat/shared/services/socket.service';
 import {DialogUserComponent} from './chat/dialog-user/dialog-user.component';
+import {ChatDesignComponent} from './chatDesign.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {DialogUserComponent} from './chat/dialog-user/dialog-user.component';
     HomeComponent,
     BlogdetailComponent,
     ChatComponent,
-    DialogUserComponent
+    DialogUserComponent,
+    ChatDesignComponent
   ],
   imports: [
     BrowserModule,

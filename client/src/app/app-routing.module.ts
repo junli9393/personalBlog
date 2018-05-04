@@ -8,6 +8,7 @@ import {BlogComponent} from './blog.component';
 import {HomeComponent} from './home.component';
 import {BlogdetailComponent} from './blogdetail.component';
 import {ChatComponent} from './chat.component';
+import {ChatDesignComponent} from './chatDesign.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'blog-detail', component: BlogdetailComponent },
   { path: 'demo', component: ChatComponent }
+  { path: 'demo-design', component: ChatDesignComponent }
 ];
 
 @NgModule({

@@ -34,10 +34,10 @@
   background-color: #b3bcbf;
   overflow: auto;
   position: fixed;
-  top: 90px;
+  top: 10%;
   left: 85%;
   right: 25px;
-  bottom: 100px;
+  bottom: 15%;
   padding: 10px;
 }
 
