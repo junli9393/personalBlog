@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'worldmap', component: WorldmapComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blog-detail', component: BlogdetailComponent },
-  { path: 'demo', component: ChatComponent }
+  { path: 'demo', component: ChatComponent },
   { path: 'demo-design', component: ChatDesignComponent }
 ];
 

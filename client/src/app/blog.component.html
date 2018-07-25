@@ -8,6 +8,71 @@
   <div class="line">
     <div class="left1">
       <a class="item" routerLink="/blog-detail" routerLinkActive="active">
+        <img class="photo" src="../assets/blogs/image/13.JPG" id="13" (click)="sendMessage($event, 'Little Yellow Flowers')">
+      </a>
+    </div>
+
+    <div class="middle1">
+      <div class="horizontal-line">
+        <br/>
+        <br/>
+        <hr class="title-line">
+      </div>
+      <div class="title">
+        <a class="word-link" routerLink="/blog-detail" routerLinkActive="active" (click)="sendMessageByNumber(14, 'Fairy Town')">
+          <p class="blog-word"> Fairy Town </p>
+          <p > @Canada <br/> Quebec -> Montreal </p>
+        </a>
+      </div>
+    </div>
+
+    <div class="right1">
+      <a class="item" routerLink="/blog-detail" routerLinkActive="active">
+        <img class="photo" src="../assets/blogs/image/15.JPG" id="15" (click)="sendMessage($event, 'Gone with the Maple Leaf')">
+      </a>
+    </div>
+  </div>
+
+  <div class="line2">
+    <div class="left2">
+      <div class="horizontal-line">
+        <br/>
+        <br/>
+        <hr class="title-line">
+      </div>
+      <div class="title">
+        <a class="word-link" routerLink="/blog-detail" routerLinkActive="active" (click)="sendMessageByNumber(13, 'Little Yellow Flowers')">
+          <p> Little Yellow Flowers
+          <p> @Dog Mountain</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="middle2">
+      <a class="item" routerLink="/blog-detail" routerLinkActive="active">
+        <img class="photo" src="../assets/blogs/image/14.JPG" id="14" (click)="sendMessage($event, 'Fairy Town')">
+      </a>
+    </div>
+
+    <div class="right2">
+      <div class="horizontal-line">
+        <br/>
+        <br/>
+        <hr class="title-line">
+      </div>
+      <div class="title" >
+        <a class="word-link" routerLink="/blog-detail" routerLinkActive="active" (click)="sendMessageByNumber(15, 'Gone with the Maple Leaf')">
+          <p> Gone with the Maple Leaf
+          <p> @Canada <br/> Ottawa -> Kingston -> Toronto -> Niagara
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="line">
+    <div class="left1">
+      <a class="item" routerLink="/blog-detail" routerLinkActive="active">
         <img class="photo" src="../assets/blogs/image/11.JPG" id="10" (click)="sendMessage($event, 'Hanbok, the apple of my eyes')">
       </a>
     </div>
@@ -136,8 +201,6 @@
 
     </div>
   </div>
-
-
 
 
   <div class="line">
