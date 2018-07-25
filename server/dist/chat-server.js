@@ -14,6 +14,7 @@ var ChatServer = /** @class */ (function () {
     var iotdata = new AWS.IotData({
         endpoint: 'https://data.iot.us-west-2.amazonaws.com',
         region: region,
+       credentials: new AWS.Credentials('AKIAJLOVCUFIO66W537A', 'O1OMacr3BcvnUX+L8JlSqVEXuNb/FOCMYj5OkQjv')
     });
     var awsIot = require('aws-iot-device-sdk');
 
@@ -80,9 +81,9 @@ var ChatServer = /** @class */ (function () {
         });
 
         var shadows = awsIot.thingShadow({
-            keyPath: '/Users/junli/express-locallibrary-tutorial/routes/7f225d67cf.private.pem.key',
-            certPath: '/Users/junli/express-locallibrary-tutorial/routes/7f225d67cf.certificate.pem.crt',
-            caPath: '/Users/junli/express-locallibrary-tutorial/routes/root-CA.crt',
+            keyPath: '/home/ec2-user/app/personalBlog/routes/7f225d67cf.private.pem.key',
+            certPath: '/home/ec2-user/app/personalBlog/routes/7f225d67cf.certificate.pem.crt',
+            caPath: '/home/ec2-user/app/personalBlog/routes/root-CA.crt',
             clientId: '7f225d67cf',
             host: 'a1db7pii5h06gt.iot.us-west-2.amazonaws.com',
             debug: true
