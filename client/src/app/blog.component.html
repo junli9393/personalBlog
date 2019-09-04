@@ -4,6 +4,70 @@
     <p class="middle-text">{{text_display2}}
   </div>
 
+  <div class="line">
+    <div class="left1">
+      <a class="item" routerLink="/blog-detail" routerLinkActive="active">
+        <img class="photo" src="../assets/blogs/image/19.JPG" id="19" (click)="sendMessage($event, 'Trip to the east coast')">
+      </a>
+    </div>
+
+    <div class="middle1">
+      <div class="horizontal-line">
+        <br/>
+        <br/>
+        <hr class="title-line">
+      </div>
+      <div class="title">
+        <a class="word-link" routerLink="/blog-detail" routerLinkActive="active" (click)="sendMessageByNumber(20, 'Hello Chicago')">
+          <p class="blog-word"> Hello Chicago </p>
+          <p > @Chicago
+        </a>
+      </div>
+    </div>
+
+    <div class="right1">
+      <a class="item" routerLink="/blog-detail" routerLinkActive="active">
+        <img class="photo" src="../assets/blogs/image/21.JPG" id="21" (click)="sendMessage($event, 'Meet NYC')">
+      </a>
+    </div>
+  </div>
+  <div class="line2">
+    <div class="left2">
+      <div class="horizontal-line">
+        <br/>
+        <br/>
+        <hr class="title-line">
+      </div>
+      <div class="title">
+        <a class="word-link" routerLink="/blog-detail" routerLinkActive="active" (click)="sendMessageByNumber(19, 'Trip to the east coast')">
+          <p> Trip to the east coast
+          <p> @Boston -> Philli -> DC </p>
+        </a>
+      </div>
+    </div>
+
+    <div class="middle2">
+      <a class="item" routerLink="/blog-detail" routerLinkActive="active">
+        <img class="photo" src="../assets/blogs/image/20.JPG" id="20" (click)="sendMessage($event, 'Hello Chicago')">
+      </a>
+    </div>
+
+    <div class="right2">
+      <div class="horizontal-line">
+        <br/>
+        <br/>
+        <hr class="title-line">
+      </div>
+      <div class="title" >
+        <a class="word-link" routerLink="/blog-detail" routerLinkActive="active" (click)="sendMessageByNumber(21, 'Meet NYC')">
+          <p> Meet NYC
+          <p> @New York
+        </a>
+      </div>
+
+    </div>
+  </div>
+
 
   <div class="line">
     <div class="left1">
